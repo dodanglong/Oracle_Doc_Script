@@ -1,0 +1,26 @@
+Các phần chú ý
+1. Trên db gốc: 
+- Loại bỏ hết các component không sử dụng hoặc không tương thích với phiên bản sau nâng cấp (19c)
+- Loại bỏ hết các App mà không tương thích với 19c
+- Tư duy: Loại bỏ dư thừa
+
+2. Trong quá trình nâng cấp
+- Có hệ thống Test tương đương hệ thống thật (tài nguyên - CPU, RAM, Disk)
+
+3. Quá trình UAT 
+- 2 người làm chính 
+- Mỗi người làm 15 lần 
+- Tất cả các lỗi phát sinh đều fix hết
+
+4. Test sau khi nâng cấp UAT
+- Tất cả các job nặng (gather, EOD...) đều phải tối ưu, bắt buộc phải giải quyết cho thời gian <= Production
+- Không bỏ qua bất kỳ câu lệnh nào chậm 
+
+5. Kết quả
+- Job nặng giảm 30% so với bản 11g.
+
+
+6. Chú ý
+- Trong Oracle 11g có nhiều tham số phải đặt bằng tay.
+- Lên Oracle 19c thì đầu tiên chuyển tương tự thông số 11g, sau đó chuyển các tham số thủ công về Auto (test dần dần) 
+-> Kết quả thông số Auto thấy tốt hơn.
